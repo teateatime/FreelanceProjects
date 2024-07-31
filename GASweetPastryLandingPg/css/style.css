@@ -1,0 +1,266 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+      margin: 0; /* Add this line to remove default body margin */
+      background-color: plum;
+}
+
+.main-container {
+    height: 100vh;
+    background-image: url("../images/pastry.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px pink;
+    font-size: 30px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 1; /* Add z-index to ensure header is displayed above other elements */
+}
+
+.header h2 {
+    color: white;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px pink;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header-right a.active,
+.header-right a:hover {
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 2px 2px 4px pink;
+}
+
+.purpose {
+    height: 100vh;
+    background-color: plum;
+    position: relative;
+
+    padding: 50px;
+    font-size: 34px;
+    color: white;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px pink;
+}
+
+.purpose h2 {
+    font-size: 40px;
+    padding: 20px 20px 20px 0;
+    color: white;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px pink;
+}
+
+.sweet-imgs {
+    height: 100vh;
+    background-color: plum;
+    position: relative;
+    padding: 20px;
+}
+
+#productsh2 {
+    background-color: plum;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: 1px #F8F8F8;
+    text-shadow: 0px 2px 4px pink;
+}
+
+.mySlides {
+    display: none;
+    margin: 0 auto;
+    height: 50%;
+    position: relative;
+}
+
+.mySlides img {
+    height: 80vh;
+    margin: 30px 0;
+    margin-top: 70px;
+    object-fit: contain;
+}
+
+.description-container {
+    float: right;
+    position: relative;
+    top: -50vh;
+    left: -150px;
+    color: rgb(233, 227, 232);
+    font-size: 22px;
+    -webkit-text-stroke: 1px #bb9fb2;
+    text-shadow: 2px 2px 4px rgb(197, 120, 180);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: -73%; /* Adjust the desired distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px; /* Adjust the spacing between the dots */
+    background-color: #afaeae;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #424242;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    } 
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .description-container {
+        float: none;
+        position: initial;
+        text-align: center;
+        color: rgb(233, 227, 232);
+        padding: 20px;
+        font-size: 25px;
+        -webkit-text-stroke: 1px #bb9fb2;
+        text-shadow: 2px 2px 4px rgb(197, 120, 180);
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .main-container {
+        font-size: 20px;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .purpose {
+        font-size: 24px;
+    }
+
+    .purpose h2 {
+        font-size: 40px;
+    }
+
+    .mySlides img {
+        height: 50vh;
+        margin-top: 30px;
+    }
+
+    .description-container {
+        font-size: 16px;
+    }
+
+    .dots-container {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .main-container {
+        font-size: 20px;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+
+    .purpose {
+        font-size: 20px;
+    }
+
+    .purpose h2 {
+        font-size: 28px;
+    }
+
+    .mySlides img {
+        height: 50vh;
+        margin-top: 30px;
+    }
+
+    .description-container {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .main-container {
+        font-size: 18px;
+    }
+
+    .header {
+        font-size: 12px;
+    }
+
+    .purpose {
+        font-size: 16px;
+    }
+
+    .purpose h2 {
+        font-size: 24px;
+    }
+
+    .mySlides img {
+        height: 40vh;
+        margin-top: 20px;
+    }
+
+    .description-container {
+        font-size: 14px;
+    }
+}
